@@ -54,6 +54,7 @@ Embedded inside Website
 
 ```
 student_ai_project/
+│── student_mark_predictor.py
 │── app.py
 │── student_marks_model.pkl
 │── records.csv (auto-generated)
