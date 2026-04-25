@@ -56,6 +56,7 @@ project/
 ├── model.py # ML model
 ├── generate_data.py # Dataset generator
 ├── student_marks.csv # Generated dataset
+├── requirements.txt
 │
 ├── pages/
 │ └── results.py # Results + analytics
