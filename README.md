@@ -1,147 +1,94 @@
-# 🎓 Student Marks Predictor & Analytics Dashboard
+# 🎓 Student Performance Analyzer
 
-An end-to-end AI project that predicts student exam performance and visualizes usage analytics. This project demonstrates a **complete ML pipeline**:
-
-Model Training → Web App → Data Collection → Business Intelligence Dashboard
+A smart, interactive web app that predicts student performance based on academic behavior and provides insights on how to improve.
 
 ---
 
 ## 🚀 Features
 
-* Predict final exam marks using Machine Learning
-* Interactive web interface (Streamlit)
-* Automatic data logging of predictions
-* Analytics dashboard (Power BI)
-* Real-time performance insights
+- 📊 Predict final marks based on:
+  - Study hours
+  - Attendance
+  - Subject-wise marks
+
+- 🧠 Intelligent analysis using:
+  - Average performance
+  - Weakest subject detection
+  - Consistency (variance)
+  - Effort & discipline factors
+
+- 📈 Visual insights:
+  - Subject-wise performance graph
+
+- 💡 Explainable results:
+  - Shows *why* a prediction was made
+  - Highlights weak areas and improvement suggestions
 
 ---
 
-## 🧠 Machine Learning Model
+## 🧠 How it Works
 
-Algorithm used: **Linear Regression**
+The model uses a combination of:
 
-### Input Features
+- Feature engineering:
+  - Average marks
+  - Maximum & minimum marks
+  - Variance (consistency)
+  - Study hours
+  - Attendance
 
-* Hours Studied
-* Attendance Percentage
-* Internal Marks
+- Machine Learning:
+  - Random Forest Regressor
 
-### Output
-
-* Predicted Final Marks
-
----
-
-## 🏗️ System Architecture
-
-```
-Google Colab (Model Training)
-        ↓
-Trained Model (.pkl)
-        ↓
-Streamlit Web App (Prediction)
-        ↓
-CSV Database (records.csv)
-        ↓
-Power BI Dashboard (Analytics)
-        ↓
-Embedded inside Website
-```
+- Simulated dataset with realistic patterns:
+  - Weak subject penalties
+  - Consistency penalties
+  - Real-world noise
 
 ---
 
-## 📂 Project Structure
+## 📁 Project Structure
 
-```
-student_ai_project/
-│── student_mark_predictor.py
-│── app.py
-│── student_marks_model.pkl
-│── records.csv (auto-generated)
-│── requirements.txt
-│── README.md
+``` bash
+project/
+│
+├── app.py # Input page
+├── model.py # ML model
+├── generate_data.py # Dataset generator
+├── student_marks.csv # Generated dataset
+│
+├── pages/
+│ └── results.py # Results + analytics
+│
+├── assets/
+│ └── predict.png # UI image
 ```
 
 ---
 
-## ⚙️ Installation
+## ⚙️ Installation & Setup
 
-Clone repository
+### 1. Clone the repository
 
+```bash
+git clone https://github.com/your-username/student-performance-analyzer.git
+cd student-performance-analyzer
 ```
-git clone https://github.com/YOUR_USERNAME/student-marks-predictor.git
-cd student-marks-predictor
-```
 
-Install dependencies
+### 2. Install dependencies
 
-```
+```bash
 pip install -r requirements.txt
 ```
 
-Run application
+### 3. Generate dataset
 
+```bash
+python generate_data.py
 ```
+
+### 4. Run the app
+
+```bash
 streamlit run app.py
 ```
-
----
-
-## 📊 Dashboard (Power BI)
-
-The app stores every prediction in `records.csv`.
-
-Power BI reads this file and creates:
-
-* Average predicted marks
-* Study hours vs performance
-* Attendance vs performance
-* Usage trends over time
-
----
-
-## 🧪 Example Prediction
-
-Input:
-
-```
-Hours Studied: 6
-Attendance: 85%
-Internal Marks: 22
-```
-
-Output:
-
-```
-Predicted Final Marks: 74.3
-```
-
----
-
-## 🛠️ Tech Stack
-
-* Python
-* Scikit-learn
-* Streamlit
-* Pandas & NumPy
-* Power BI
-
----
-
-## 🎯 Learning Outcomes
-
-This project demonstrates:
-
-* Machine Learning model training
-* Model deployment
-* Data engineering
-* Dashboard analytics
-
----
-
-## 📌 Future Improvements
-
-* Add user login system
-* Store data in database (MySQL/Firebase)
-* Improve model with more features
-* Deploy online (Render/Streamlit Cloud)
