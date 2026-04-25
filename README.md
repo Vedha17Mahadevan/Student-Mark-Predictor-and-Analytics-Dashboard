@@ -92,3 +92,37 @@ python generate_data.py
 ```bash
 streamlit run app.py
 ```
+---
+## ⚠️ Disclaimer
+
+This project uses **synthetic data** for demonstration purposes.
+
+It is designed to:
+- Showcase machine learning concepts  
+- Demonstrate feature engineering  
+- Provide explainable predictions  
+
+It is **not intended for real-world academic evaluation**.
+
+---
+
+## 🧠 Key Learnings
+
+- Importance of feature engineering over just model selection  
+- Combining rule-based logic with ML improves realism  
+- Explainability makes models more useful and trustworthy  
+
+---
+
+## 🔮 Future Improvements
+
+- Use real student datasets  
+- Add “what-if” performance simulation  
+- Deploy as a public web app  
+- Enhance UI/UX  
+
+---
+
+## ⭐ If you found this useful
+
+Give it a star ⭐ on GitHub!
